@@ -3,7 +3,7 @@ import inquirer from "inquirer";
 //todos array.done
 //funtion.done
 //operation.done
-let todos : string[] = []
+let todos : string[] = ["Reading", "Writing", "Drawing", "Crafting"]
 async function createtodo(todos:string[]) {
     do{let ans = await inquirer.prompt(
         [
