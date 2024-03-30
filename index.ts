@@ -33,7 +33,7 @@ async function createtodo(todos:string[]) {
             [
                 {
                     type: "list",
-                    message: "Select item to update",
+                    message: "Select item to update:",
                     name: "todo",
                     choices: todos.map(item => item)
                 }   
@@ -60,7 +60,7 @@ async function createtodo(todos:string[]) {
             [
                 {
                     type: "list",
-                    message: "Select item to update",
+                    message: "Select item to delete:",
                     name: "todo",
                     choices: todos.map(item => item)
                 }

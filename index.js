@@ -3,7 +3,7 @@ import inquirer from "inquirer";
 //todos array.done
 //funtion.done
 //operation.done
-let todos = [];
+let todos = ["Reading", "Writing", "Drawing", "Crafting"];
 async function createtodo(todos) {
     do {
         let ans = await inquirer.prompt([
@@ -29,7 +29,7 @@ async function createtodo(todos) {
             let updatetodo = await inquirer.prompt([
                 {
                     type: "list",
-                    message: "Select item to update",
+                    message: "Select item to update:",
                     name: "todo",
                     choices: todos.map(item => item)
                 }
@@ -52,7 +52,7 @@ async function createtodo(todos) {
             let Deletetodo = await inquirer.prompt([
                 {
                     type: "list",
-                    message: "Select item to update",
+                    message: "Select item to delete:",
                     name: "todo",
                     choices: todos.map(item => item)
                 }
