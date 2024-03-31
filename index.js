@@ -11,7 +11,7 @@ async function createtodo(todos) {
                 type: "list",
                 message: "Select an operation",
                 name: "Select",
-                choices: ["add todo", "update todo", "view todo", "Delete todo"]
+                choices: ["add todo", "update todo", "view todo", "Delete todo", "Exit"]
             }
         ]);
         if (ans.Select == "add todo") {
@@ -60,6 +60,10 @@ async function createtodo(todos) {
             let newtodos = todos.filter(val => val !== Deletetodo.todo);
             todos = [...newtodos];
             console.log(todos);
+        }
+        if (ans.Select == "Exit") {
+            console.log("Thank you for using Todo list");
+            break;
         }
     } while (true);
 }
